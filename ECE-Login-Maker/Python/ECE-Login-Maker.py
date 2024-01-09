@@ -11,6 +11,15 @@ WaterlooID = input("What is your Waterloo ID : ")
 script = """
 #!/bin/bash
 
+read -p \'\n\n\nIf the Login didnt work make sure youve: \n
+1. Inputted the right Waterloo ID \n
+2. Connected to CISCO VPN \n
+3. Are connected to Internet 
+
+Press Enter to continue
+
+\'
+
 echo \'Starting login Process for ECE Server as {}\'
 
 echo -e " 
@@ -25,14 +34,9 @@ echo -e "
 
 """.format(WaterlooID)
 
-script += "timeout 10s ssh {}@iccad5".format(WaterlooID)
+script += "ssh {}@iccad5".format(WaterlooID)
 
-script += """
-read -p \'\n\n\nIf the Login didnt work make sure youve: \n
-1. Inputted the right Waterloo ID \n
-2. Connected to CISCO VPN \n
-3. Are connected to Internet \'
-"""
+
 
 
 #Ask for output path and name
