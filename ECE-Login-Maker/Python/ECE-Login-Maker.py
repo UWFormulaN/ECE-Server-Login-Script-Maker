@@ -36,9 +36,6 @@ echo -e "
 
 script += "ssh {}@iccad5".format(WaterlooID)
 
-
-
-
 #Ask for output path and name
 output_path = filedialog.asksaveasfilename(defaultextension=".sh", filetypes=[("Bash File", "*.sh"), ("All files", "*.*")])
 
